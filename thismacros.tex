@@ -1,0 +1,31 @@
+\newcommand\qr[2]{\left( \frac{#1}{#2} \right)} % quad rec
+\newcommand\Aut{\operatorname{Aut}}
+\newcommand\normaleq{\trianglelefteq}
+\newcommand\Gal{\operatorname{Gal}}
+\newcommand\legendre[2]{\left( \frac{#1}{#2 }\right)}
+
+\newcommand\unit{\varepsilon}
+\newcommand\Div{\operatorname{Div}}
+\newcommand\ord{\operatorname{ord}}
+\newcommand\TT{{\Bbb T}}
+\newcommand\LP{\left(}
+\newcommand\RP{\right)}
+\newcommand\Tr{{\operatorname{Tr}}}
+
+\newtheorem{qn}{Question}  \numberwithin{qn}{section}
+\newtheorem{conjecture}{Conjecture}  \numberwithin{conjecture}{section}
+\newtheorem{axiom}{Axiom}  \numberwithin{axiom}{section}
+
+%\setlist[itemize]{before=\normalfont} % is this a good idea?
+
+\makeatletter
+\newlist{myenum@}{enumerate}{1}
+\setlist{nosep,noitemsep,topsep=0pt}
+\setlist[itemize]{noitemsep,topsep=0pt}
+\setlist[enumerate]{noitemsep,topsep=0pt}
+\setlist[myenum@]{label=\normalfont{(\alph*)},ref=\arabic*,nosep,topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=0pt}
+\newenvironment{myenum}[1][]
+  {\begin{myenum@}[#1]
+     }
+  {\end{myenum@}}
+\makeatother
