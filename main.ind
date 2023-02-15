@@ -1,25 +1,30 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{13}
+  \item abelian group, \hyperpage{21}
 
   \indexspace
 
-  \item Caesar cipher, \hyperpage{5}
+  \item Caesar cipher, \hyperpage{13}
 
   \indexspace
 
-  \item divides, \hyperpage{3}
+  \item divides, \hyperpage{10}
 
   \indexspace
 
-  \item group, \hyperpage{13}
+  \item group, \hyperpage{21}
 
   \indexspace
 
-  \item inverse, \hyperpage{13}
+  \item inverse, \hyperpage{21}
+  \item invertible, \hyperpage{7}
 
   \indexspace
 
-  \item shift cipher, \hyperpage{5}
+  \item shift cipher, \hyperpage{13}
+
+  \indexspace
+
+  \item unit, \hyperpage{7}
 
 \end{theindex}

@@ -1,5 +1,362 @@
 \chapter{Basic number theory}
 
+\boxpar{
+\textsc{Suggestions}.
+For this chapter, state the basic axioms and properties/theorems of $\Z$.
+Provide proofs. 
+But remember that most of the properties/theorems can be generlized
+to properties/theorems for rings.
+It's still a good idea to prove the facts for $\Z$ since $\Z$ is not
+as abstract as general rings and will prepare you for the general results.
+}
+
+\section{Axioms of $\Z$}
+
+We will assume that $(\Z, +, \cdot, 0, 1)$ satisfies the following
+axioms.
+\begin{enumerate}[nosep]
+  \li \textsc{Properties of $+$:}
+  \begin{enumerate}[nosep]
+    \li Closure: If $x, y \in \Z$, then $x + y \in \Z$.
+    \li Associativity: If $x, y, z \in \Z$, then $(x + y) + z = x + (y + z)$.
+    \li Inverse: If $x \in \Z$, then there is some $y$ such that $x + y = 0 = y + x$.
+      The $y$ in the above is an additive inverse of $x$.
+    \li Neutrality: If $x \in \Z$, then $0 + x = x = x + 0$.
+    \li Commutativity: If $x, y \in \Z$, then $x + y = y + x$.
+  \end{enumerate}
+  (Memory aid for the first four: CAIN.)
+  \li \textsc{Properties of $\cdot$:}
+  \begin{enumerate}[nosep]
+  \li Closure: If $x, y \in \Z$, then $x \cdot y \in \Z$.
+  \li Associativity: If $x, y, z \in \Z$, then $(x \cdot y) \cdot z = x \cdot (y \cdot z)$.
+  \li Neutrality: If $x \in \Z$, then $1 \cdot x = x = x + 1$.
+  \li Commutativity: If $x, y \in \Z$, then $x \cdot y = y \cdot x$.
+  \end{enumerate}
+  It is common to write $xy$ instead of $x \cdot y$.
+
+  \li \textsc{Distributivity}:
+  If $x, y, z \in \Z$, then
+  $x \cdot (y + z) = x \cdot y + x \cdot z$
+  and
+  $(y + z) \cdot x = y \cdot x + z \cdot x$
+    
+\end{enumerate}
+
+A set $R$ with operations $+, \cdot$ and elements $0_R, 1_R$ satisfying
+the above properties the above is called a commutative ring.
+This is an important generalization because there are many
+very useful commutative rings and we want to prove results about
+commutative rings so that these results can be applied to all
+commutative rings, including but not restricted to $\Z$.
+And if the commutativity of multiplication is left out, then we have the
+concept of a ring; for emphasize these are called non-commutative rings.
+This is also an important concept since $n \times n$ matrices with $\R$
+entries, $\operatorname{M}_{n \times n}(\R)$, form a non-commutative ring.
+In fact, more generally,
+the set of $n\times n$ matrices with entries in a commutative ring $R$,
+$\operatorname{M}_{n \times n}(R)$,
+is itself a non-commutative ring.
+We will return to the concept of commutative and non-commutative rings later.
+
+The next property of $\Z$, integrality,
+is very special and does not apply to many
+communtative rings and is therefore
+left out of the definition of commutative ring:
+\begin{enumerate}[nosep]
+  \li \textsc{Integrality}:
+  If $x, y \in \Z$, then
+  $xy = 0 \implies x = 0$ or $y = 0$.
+\end{enumerate}
+Another property of $\Z$ that we will assume is
+\begin{enumerate}[nosep]
+  \li \textsc{Nontriviality}:
+  $0 \neq 1$
+\end{enumerate}
+This axiom of $\Z$ is extremely simple, but cannot be deduced from
+the previous axioms.
+
+The above forms the algebraic properties of $\Z$, i.e., properties involving
+addition and multiplication.
+
+It is actually possible to first define axioms for
+$\N = \{0, 1, 2, ...\}$ and then define $\Z$ in terms of $\N$.
+We will not do that except to mention that the
+axioms for $\N$ are called the
+\href{https://en.wikipedia.org/wiki/Giuseppe_Peano}{Peano}-\href{https://en.wikipedia.org/wiki/Richard_Dedekind}{Dedekind} axioms
+and that one very important Peano-Dedekind axiom of $\N$ is the
+\begin{enumerate}[nosep]
+  \li \textsc{Well-ordering principle (WOP)} for $\N$:
+  If $X$ is a nonempty subset of $\N$, then $X$ contains a minimum element,
+  i.e., there is some $m \in X$ such that
+  \[
+  m \leq x
+  \]
+  for all $x \in X$.
+\end{enumerate}
+Without going into details, it can be shown that for $\N$, the WOP
+is equivalent to each of the following axioms:
+\begin{enumerate}[nosep]
+  \li \textsc{Weak Mathematical Induction} for $\N$:
+  Let $X$ be a subset of $\N$ satisyfing the following two conditions:
+  \begin{enumerate}[nosep]
+    \li $0 \in X$ and
+    \li Let $n \in \N$. If $n \in X$, then $n + 1 \in X$.
+  \end{enumerate}
+  Then $X = \N$.
+\end{enumerate}
+and
+\begin{enumerate}[nosep]
+  \li \textsc{Strong Mathematical Induction} for $\N$:
+  Let $X$ be a subset of $\N$ satisyfing the following two conditions:
+  \begin{enumerate}[nosep]
+    \li $0 \in X$ and
+    \li Let $n \in \N$. If $k \in X$ for all $0 \leq k \leq n$,
+    then $n + 1 \in X$.
+  \end{enumerate}
+  Then $X = \N$.
+\end{enumerate}
+  
+In the above two induction axioms, if we write $X = \{n \mid P(n)\}$ where
+$P(n)$ is a propositional formula,
+then the induction axioms can be rewritten in the
+following way:
+
+\begin{enumerate}[nosep]
+  \li \textsc{Weak Mathematical Induction}:
+  Let $P(n)$ be a proposition for $n \in \N$ satisyfing the following two
+  conditions:
+  \begin{enumerate}[nosep]
+    \li $P(0)$ is true and
+    \li Let $n \in \N$. If $P(n)$ is true, then $P(n+1)$ is true.
+  \end{enumerate}
+  Then $P(n)$ is true for all $n \in \N$.
+\end{enumerate}
+and
+\begin{enumerate}[nosep]
+  \li \textsc{Strong Mathematical Induction}:
+  Let $P(n)$ be a proposition for $n \in \N$ satisyfing the following two
+  conditions:
+  \begin{enumerate}[nosep]
+    \li $P(0)$ is true and
+    \li Let $n \in \N$. If $k \in X$ for all $0 \leq k \leq n$,
+    then $n + 1 \in X$.
+    \li Let $n \in \N$. If $P(k)$ is true for $0 \leq k \leq n$,
+    then $P(n+1)$ is true.
+  \end{enumerate}
+  Then $P(n)$ is true for all $n \in \N$.
+\end{enumerate}
+
+The above are the algebraic axioms of $\Z$.
+There's also the order relation of $\Z$ which is used in WOP
+and the two induction principles.
+I will formalize the axioms of the order relation later.
+For now one can assume that the order relation is defined as follows:
+If $x \in \Z$, then
+\[
+x < y
+\]
+if there is some $z \in \N$ such that
+\[
+x + z = y
+\]
+There is one more axiom of $\Z$ that is related to the
+\lq\lq topology" of $\Z$ and uses the order relation:
+
+\begin{enumerate}[nosep]
+  \li \textsc{Topology}:
+  Given any $x \in \Z$, there is no $y \in \Z$ such that
+  \[
+  x < y < x + 1
+  \]
+\end{enumerate}
+
+You can think of topology of a set as study of \lq\lq closeness" of values
+in that set.
+For $\Q$, given any two distinct
+rational values $x < y$, there is also some $z \in \Q$ such that
+$x < z < y$.
+This is the same for $\R$.
+Therefore the topology of $\Z$ is very different from the topology
+of $\Q$ and $\R$ because there are \lq\lq holes" in $\Z$ where
+there are no $\Z$ values.
+$\Z$ has what is called a discrete topology.
+
+The above assume the existence of an order relation on $\Z$, i.e., $<$.
+We have to include the following axioms of $<$ on $\Z$.
+There is a set $\Z^+$ such that the following holds:
+\begin{enumerate}[nosep]
+  \li \textsc{Trichotomy}: If $x \in \Z$, then exactly one of the following holds:
+  $-x \in \Z^+$, $x = 0$, $x \in \Z^+$.
+  \li \textsc{Closure of $+$}: If $x,y \in \Z^+$, then $x + y \in \Z^+$.
+  \li \textsc{Closure of $\cdot$}: If $x,y \in \Z^+$, then $x \cdot y \in \Z^+$.
+\end{enumerate}
+We then define $<$ as follows: If $x, y \in \Z$, then we write $x < y$ if
+\[
+y - x \in \Z^+
+\]
+Since $<$ is defined, we can define $x \leq y$ to mean \lq\lq either $x < y$
+or $x = y$".
+The above order relation is expressed abstractly without refering to the fact that
+$\Z^+$ is $\{1, 2, 3, ...\}$, i.e., the set of positive integers.
+In fact, you can prove $\Z^+ = \{1, 2, 3, ...\}$ from the above axioms --
+see exercises below.
+
+\begin{prop}
+  The additive inverse for $x$ is unique.
+  In other words, if $y, y'$ satisfies
+  \begin{align*}
+    x + y &= 0 = y + x \\
+    x + y' &= 0 = y' + x \\
+  \end{align*}
+  Then $y = y'$.
+\end{prop}
+
+Since the additive inverse of $x$ is unique, we can choose to write
+the additive inverse of $x$ in terms of $x$.
+This is usually written $-x$.
+We define the operator $-$ in terms of the additive inverse:
+
+\begin{defn}
+  Let $x,y \in \Z$. We define the subtraction operator as
+  \[
+  x - y = x + (-y)
+  \]
+\end{defn}
+
+Note that every $x$ in $\Z$ as an additive inverse, but we did not
+require value of $\Z$ to have multiplicative inverse:
+
+\begin{defn}
+  Let $x \in \Z$. Then $y$ is a multiplicative inverse of $x$ if
+  \[
+  x\cdot y = 1 = y\cdot x
+  \]
+  We say that $x$ is a \defone{unit} if $x$ has a multiplicative inverse.
+  We can also say that $x$ is \defone{invertible}.
+\end{defn}
+
+Intuitively, you know that the only values of $\Z$ with multiplicative inverses
+are $1$ and $-1$.
+
+\begin{prop}
+  Let $x \in \Z$.
+  If $x$ is a unit, then the multiplicative inverse of $x$ is unique.
+  In other words if $y,y'$ satisfies
+  \begin{align*}
+    x  y &= 1 = y x \\
+    x  y' &= 1 = y' x \\
+  \end{align*}
+  then $y = y'$.
+\end{prop}
+
+\begin{defn}
+  The multiplicative inverse of $x$, it is exists, is is denoted by $x^{-1}$.
+\end{defn}
+
+\begin{prop}
+  Cancellation law for addition.
+  Let $x, y, z \in \Z$.
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+    \item If $x + z = y + z$, then $x = y$.
+    \item If $z + x = z + y$, then $x = y$.
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}
+  Let $x \in \Z$.
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item $0x = 0 = x0$
+  \item $-0 = 0$
+  \item $x - 0 = x = 0 - x$.
+  \end{enumerate}
+\end{prop}
+\proof
+(a) We will first prove $0x = 0$:
+\begin{align*}
+  0x &= (0 + 0)x & & \text{by Neutrality of $+$} \\
+     &= 0x + 0x  & & \text{by Distributivity} \tag{1}
+\end{align*}
+Since $0x \in \Z$ by Closure of $\cdot$, there is
+exists some $y \in \Z$ which is an additive inverse of $0x$, i.e.,
+\[
+0x + y = 0 = y + 0x \tag{2}
+\]
+From (1),
+\begin{align*}
+  y + 0x &= y + (0x + 0x)  \\
+  0      &= y + (0x + 0x) & & \text{ by (2)} \\
+  0      &= (y + 0x) + 0x & & \text{ by Associativity of $+$} \\
+  0      &= 0 + 0x        & & \text{ by (2)} \\
+  0      &= 0x            & & \text{ by Neutrality of $+$}
+\end{align*}
+To prove $0 = x0$, from above
+\begin{align*}
+  0 &= 0x \\
+    &= x0 & & \text{ by Commutativity of $\cdot$}
+\end{align*}
+
+(b) TODO
+
+(c) TODO
+\qed
+
+\begin{prop}
+  Let $x, y \in \Z$.
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item $-(-1) = 1$
+  \item $-(-x) = x$
+  \item $x(-1) = -x = (-1)x$
+  \item $(-1)(-1) = 1$
+  \item $(-x)(-y) = xy$
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}
+  Cancellation law for multiplication.
+  Let $x, y, z \in \Z$.
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+    \item If $xz = yz$ and $z \neq 0$, then $x = y$.
+    \item If $zx = zy$ and $z \neq 0$, then $x = y$.
+  \end{enumerate}
+\end{prop}
+
+For convenience, I will write $x^2 = xx$ and in general
+\[
+x^n =
+\begin{cases}
+  1       &\text{if } n = 0 \\
+  x^{n-1}x &\text{if } n > 0 \\
+\end{cases}
+\]
+If $x$ has a multiplicative inverse, i.e., if $x^{-1}$ exists,
+then, for $n \geq 0$, I will define
+\[
+x^{-n} = \left( x^{-1} \right)^n
+\]
+
+\begin{prop}
+  Let $x \in \Z$.
+  Then $[n]x = n \cdot x$.
+\end{prop}
+
+Note that $nx$ has two meanings: $nx$ can be the multiplication of $n$
+and $x$ and it can also be $x + \cdots + x$ with $n$ number of $x$.
+Of course you would expect them to be the same.
+For now define
+\[
+  [n]x =
+  \begin{cases}
+    0       &\text{if } n = 0 \\
+    [n-1]x + x &\text{if } n > 0 \\
+  \end{cases}
+\]
+and if $n$ is negative, we define
+\[
+[n]x = -([-n]x)
+\]
+
+\newpage
+\section{Divisibility}
 \begin{defn}
   Let $m, n \in \Z$.
   Then we say that $m$ \defterm{divides} $n$, and we write $m \mid n$, if
@@ -12,11 +369,62 @@
 
 \begin{prop}
   Let $a \in \Z$.
-  \begin{itemize}
-  \item[(a)] Then $1 \mid a$.
-  \item[(b)] If $a \neq 0$, then $a \mid 0$.
-  \item[(c)] (Reflexive) If $a \neq 0$, then $a \mid a$.
-  \item[(d)] If $a \mid b$ and $b \mid a$, then $a = \pm b$.  
-  \item[(d)] (Transitive) If $a \mid b$ and $b \mid c$, then $a \mid c$.
-  \end{itemize}
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item Then $1 \mid a$.
+  \item If $a \neq 0$, then $a \mid 0$.
+  \item (Reflexive) If $a \neq 0$, then $a \mid a$.
+  \item If $a \mid b$ and $b \mid a$, then $a = \pm b$.  
+  \item (Transitive) If $a \mid b$ and $b \mid c$, then $a \mid c$.
+  \item If $a \mid b$, then $a \mid bc$.
+  \item If $a \mid b$, $a \mid c$, then $a \mid b + c$.
+  \item (Linearity)
+    If $a \mid b$, $a \mid c$, then $a \mid bx + cy$ for $x,y \in \Z$.  
+  \end{enumerate}
+\end{prop}
+
+
+\newpage
+\section{Congruences}
+
+\begin{defn}
+  Let $a, b \in \Z$ and $N \in \Z$ with $N > 0$.
+  Then $a$ is congruent to $b$ mod $N$ and we write
+  \[
+  a \equiv b \pmod{N}
+  \]
+  if $N \mid a - b$.
+\end{defn}
+
+
+\begin{prop}
+  Let $a,b,c,a',b' \in \Z$.
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item (Reflexivity) $a \equiv a \pmod{N}$
+  \item (Symmetry) If $a \equiv b \pmod{N}$, then $b \equiv a \pmod{N}$
+  \item (Transitivity)
+    If $a \equiv b, b \equiv c \pmod{N}$, then
+    $a \equiv c \pmod{N}$
+  \item
+    If
+    $a \equiv b$,
+    $a' \equiv b' \pmod{N}$,
+    then
+    $a + a' \equiv b + b' \pmod{N}$.
+  \item
+    If
+    $a \equiv b$,
+    $a' \equiv b' \pmod{N}$,
+    then
+    $a a' \equiv b b' \pmod{N}$.
+  \end{enumerate}
+\end{prop}
+
+
+\begin{prop}
+  Let $a, N \in \Z$ with $N > 0$.
+  Let $q, r \in \Z$ such that
+  \[
+  a = Nq + r, \,\,\, 0 \leq r < N
+  \]
+  Then $a \equiv r \pmod{N}$.
 \end{prop}

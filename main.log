@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  4 FEB 2023 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  15 FEB 2023 17:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1503,6 +1503,21 @@ text indent by \l@... (toc, 0):  17.62482pt
 number indent by parent (toc, 0):  0.0pt
 text indent calculated (toc, 0): 13.20007pt
 number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  17.62482pt
+text indent by \l@... (toc, 1):  27.02475pt
+number indent by parent (toc, 1):  13.20007pt
+text indent calculated (toc, 1): 20.88867pt
+number indent calculated (toc, 1): 13.20007pt
+number indent by \l@... (toc, 1):  17.62482pt
+text indent by \l@... (toc, 1):  27.02475pt
+number indent by parent (toc, 1):  13.20007pt
+text indent calculated (toc, 1): 20.88867pt
+number indent calculated (toc, 1): 13.20007pt
+number indent by \l@... (toc, 1):  17.62482pt
+text indent by \l@... (toc, 1):  27.02475pt
+number indent by parent (toc, 1):  13.20007pt
+text indent calculated (toc, 1): 20.88867pt
+number indent calculated (toc, 1): 13.20007pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  17.62482pt
 number indent by parent (toc, 0):  0.0pt
@@ -1586,48 +1601,67 @@ number indent calculated (toc, 0): 0.0pt
 
 ]) (./chap-number-theory.tex
 chapter 1.
-) (./chap-classical-ciphers.tex [3
 
-]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 13.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 13.
+
+[3
+
+] [4] [5] [6]
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 23
+4.
+Package marginnote Info: right page because not two side mode on input line 234
+.
+Package marginnote Info: xpos seems to be 196.03035pt on input line 234.
+Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 23
+5.
+Package marginnote Info: right page because not two side mode on input line 235
+.
+Package marginnote Info: xpos seems to be 150.38713pt on input line 235.
+ [7] [8] [9] [10]) (./chap-classical-ciphers.tex [11]
 chapter 2.
-[4
+[12
 
-] (./classical-cipher-shift-cipher.tex) [5]
-(./classical-cipher-affine-cipher.tex) [6]
-(./classical-cipher-vigenere-cipher.tex) [7]
-(./classical-cipher-substitution-cipher.tex) [8]
-(./classical-cipher-permutation-cipher.tex) [9]
-(./classical-cipher-hill-cipher.tex) [10]
-(./classical-cipher-one-time-pad-cipher.tex) [11] (./classical-cipher-lfsr.tex)
-) (./chap-group-theory.tex [12]
+] (./classical-cipher-shift-cipher.tex) [13]
+(./classical-cipher-affine-cipher.tex) [14]
+(./classical-cipher-vigenere-cipher.tex) [15]
+(./classical-cipher-substitution-cipher.tex) [16]
+(./classical-cipher-permutation-cipher.tex) [17]
+(./classical-cipher-hill-cipher.tex) [18]
+(./classical-cipher-one-time-pad-cipher.tex) [19] (./classical-cipher-lfsr.tex)
+) (./chap-group-theory.tex [20]
 chapter 3.
 (./group-theory-definition.tex
-Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 
+Package marginnote Info: Margin note 21.1 is on absolute page 21 on input line 
 10.
 Package marginnote Info: right page because not two side mode on input line 10.
 
 Package marginnote Info: xpos seems to be 275.6113pt on input line 10.
-Package marginnote Info: Margin note 13.2 is on absolute page 13 on input line 
+Package marginnote Info: Margin note 21.2 is on absolute page 21 on input line 
 15.
 Package marginnote Info: right page because not two side mode on input line 15.
 
 Package marginnote Info: xpos seems to be 194.10231pt on input line 15.
-Package marginnote Info: Margin note 13.3 is on absolute page 13 on input line 
+Package marginnote Info: Margin note 21.3 is on absolute page 21 on input line 
 22.
 Package marginnote Info: right page because not two side mode on input line 22.
 
 Package marginnote Info: xpos seems to be 333.64456pt on input line 22.
-)) (./chap-ring-theory.tex [13
+)) (./chap-ring-theory.tex [21
 
 ]
 chapter 4.
-) (./chap-field-theory.tex [14
+) (./chap-field-theory.tex [22
 
 ]
 chapter 5.
-) (./thispostamble.tex [15
+) (./thispostamble.tex [23
 
-] (./main.ind [16
+] (./main.ind [24
 
 
 
@@ -1636,7 +1670,7 @@ chapter 5.
 ]) (./bibliography.tex)
 
 AED: lastpage setting LastPage
-[17
+[25
 
 
 
@@ -1655,27 +1689,31 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 44084 strings out of 494553
- 984782 string characters out of 6177318
- 1355884 words of memory out of 5000000
- 46966 multiletter control sequences out of 15000+600000
- 543121 words of font info for 65 fonts, out of 8000000 for 9000
+ 44149 strings out of 494553
+ 985318 string characters out of 6177318
+ 1358884 words of memory out of 5000000
+ 46978 multiletter control sequences out of 15000+600000
+ 543766 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 81i,10n,107p,9157b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,13n,107p,9157b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 123620 bytes).
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (25 pages, 191262 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
