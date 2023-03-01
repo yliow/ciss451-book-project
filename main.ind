@@ -1,10 +1,14 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{21}
+  \item abelian group, \hyperpage{45}
 
   \indexspace
 
-  \item Caesar cipher, \hyperpage{13}
+  \item B\'ezout's coefficients, \hyperpage{19}
+
+  \indexspace
+
+  \item Caesar cipher, \hyperpage{37}
 
   \indexspace
 
@@ -12,16 +16,22 @@
 
   \indexspace
 
-  \item group, \hyperpage{21}
+  \item Euclidean Algorithm, \hyperpage{13}
+  \item Extended Euclidean Algorithm, \hyperpage{19}
 
   \indexspace
 
-  \item inverse, \hyperpage{21}
+  \item GCD Lemma, \hyperpage{12}
+  \item group, \hyperpage{45}
+
+  \indexspace
+
+  \item inverse, \hyperpage{45}
   \item invertible, \hyperpage{7}
 
   \indexspace
 
-  \item shift cipher, \hyperpage{13}
+  \item shift cipher, \hyperpage{37}
 
   \indexspace
 

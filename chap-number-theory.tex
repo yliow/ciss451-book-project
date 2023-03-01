@@ -210,6 +210,8 @@ see exercises below.
   \end{align*}
   Then $y = y'$.
 \end{prop}
+\proof
+TODO
 
 Since the additive inverse of $x$ is unique, we can choose to write
 the additive inverse of $x$ in terms of $x$.
@@ -371,8 +373,8 @@ and if $n$ is negative, we define
   Let $a \in \Z$.
   \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
   \item Then $1 \mid a$.
-  \item If $a \neq 0$, then $a \mid 0$.
-  \item (Reflexive) If $a \neq 0$, then $a \mid a$.
+  \item Then $a \mid 0$.
+  \item (Reflexive) $a \mid a$.
   \item If $a \mid b$ and $b \mid a$, then $a = \pm b$.  
   \item (Transitive) If $a \mid b$ and $b \mid c$, then $a \mid c$.
   \item If $a \mid b$, then $a \mid bc$.
@@ -381,7 +383,8 @@ and if $n$ is negative, we define
     If $a \mid b$, $a \mid c$, then $a \mid bx + cy$ for $x,y \in \Z$.  
   \end{enumerate}
 \end{prop}
-
+\proof
+TODO
 
 \newpage
 \section{Congruences}
@@ -418,7 +421,8 @@ and if $n$ is negative, we define
     $a a' \equiv b b' \pmod{N}$.
   \end{enumerate}
 \end{prop}
-
+\proof
+TODO
 
 \begin{prop}
   Let $a, N \in \Z$ with $N > 0$.
@@ -428,3 +432,16 @@ and if $n$ is negative, we define
   \]
   Then $a \equiv r \pmod{N}$.
 \end{prop}
+\proof
+TODO
+
+\begin{ex}
+  Show that the cancellation law for $\Z$ does not translate to $\Z$ mod $N$.
+  In other words, find $N, a, b, c$ such that $c \not\equiv 0 \pmod{N}$ and
+  \[
+  ac \equiv bc \pmod{N}, \,\,\, a \not\equiv b \pmod{N}
+  \]
+\end{ex}
+
+\newpage\input{gcd.tex}
+\newpage\input{extended-euclidean-algorithm.tex}
