@@ -1,0 +1,12 @@
+{\footnotesize \begin{console}[frame=single, , commandchars=~!@]
+a = 25
+b = 8
+q, r = divmod(25, 8)
+print("%s = %s * %s + %s" % (a, b, q, r))
+\end{console}
+}
+\begin{Verbatim}[frame=single,fontsize=\small]
+[student@localhost ciss451-book-project] python divmod.py
+25 = 8 * 3 + 1
+\end{Verbatim}
+

@@ -44,7 +44,7 @@ me write $(a, b)$ as the set of linear combinations of $a$ and $b$, i.e.,
 \[
 (a, b) = \{ax + by \mid x,y \in \Z \}
 \]
-I will also write $(g)$ for the linear combination of $g$, i.e.,
+We will also write $(g)$ for the linear combination of $g$, i.e.,
 \[
 (g) = \{gx \mid x \in \Z \}
 \]
@@ -80,14 +80,14 @@ X = \{ax + by \mid x,y \in \Z \text{ and } ax + by > 0 \} \subseteq \N
 is nonempty since it contains
 $0\cdot a + 1\cdot |b|$.
 By the well-ordering principle of $\N$, $X$ has a minimum element, say $g$.
-I will now show that $(a, b) = (g)$.
+We will now show that $(a, b) = (g)$.
 
 Since $g$ is a minimum element of $X$, $g$ is in $X$.
 Therefore $g = ax + by$.
 Hence $gz = a(xz) + b(yz) \in (a, b)$ for all $z \in \Z$.
 This implies that $(g) \subseteq (a, b)$.
 
-Now I will prove that $(a, b) \subseteq (g)$.
+Now we will prove that $(a, b) \subseteq (g)$.
 Let $c \in (a, b)$, i.e., $c = ax + by$ for some $x,y \in \Z$.
 Therefore by the Euclidean property of $\Z$, there exists $q,r \in \Z$ such that
 \[
@@ -116,13 +116,12 @@ Hence $r = 0$ and we have
 \[
 c = gq + r = gq \in (g)
 \]
-I have shown that $(a,b) \subseteq (g)$.
+We have shown that $(a,b) \subseteq (g)$.
 
-Altogether, I've shown $(a,b) = (g)$.
+Altogether, we have shown $(a,b) = (g)$.
 Step 1 is now completed.
 
-For step 2, I 
-will show that $g$ is the gcd of $a$ and $b$.
+For step 2, we will show that $g$ is the gcd of $a$ and $b$.
 Since $(a,b) = (g)$, we have
 \[
 a \in (a,b) = (g)
@@ -145,7 +144,7 @@ First let me do an example to show you that
 it's possible to compute $\gcd(a,b)$ as a linear combination of $a$ and $b$.
 Then I'll give you the algorithm.
 
-Recall that I have computed $\gcd(514, 24) = 2$.
+Recall that we have computed $\gcd(514, 24) = 2$.
 Extended Euclidean Algorithm says that it's possible to find $x$ and $y$
 such that
 \[
@@ -307,7 +306,7 @@ Let me put the remainders on one side:
 Note that (1) tells you that
 $10$ is a linear combination of $514,24$.
 (2) tells you that $4$ is a linear combination of $24,10$.
-If I substitute (1) into (2), $4$ will become a linear
+If we substitute (1) into (2), $4$ will become a linear
 combination of $514,24$.
 (3) says that $2$ is a linear combination of $10,4$.
 But $10$ is a linear combination of $514,24$
@@ -322,7 +321,7 @@ From
 4  &= 24  - 2 \cdot 10  \tag{2} \\
 2  &= 10  - 2 \cdot 4   \tag{3} \\
 \end{align*}
-if I substitute (1) into (2) and (3) (i.e., rewrite $10$ as a linear
+if we substitute (1) into (2) and (3) (i.e., rewrite $10$ as a linear
 combination of $514,24$):
 \begin{align*}
 10 &= 514 - 21 \cdot 24 \tag{1} \\
@@ -371,7 +370,7 @@ the above.
 
 
 Now let's look at the general case.
-Suppose instead of $514$ and $24$, I write $a$ and $b$.
+Suppose instead of $514$ and $24$, we write $a$ and $b$.
 The computation will look like this:
 \begin{align*}
 a   &= q_1 \cdot b   + r_1 \\
@@ -394,8 +393,8 @@ r_3 &= (1) \cdot r_1 + (-q_2) \cdot r_2 \\
 r_4 &= (1) \cdot r_2 + (-q_3) \cdot r_3 
 \end{align*}
 (Remember that $r_4$ is the gcd ... $r_0 = 514, r_1 = 24$ ... right?)
-Organized this way, I have the gcd on one side of the equation.
-Now if I substitute the first equation into the second I get
+Organized this way, we have the gcd on one side of the equation.
+Now if we substitute the first equation into the second we get
 \begin{align*}
 r_2 &= (1) \cdot r_0 + (-q_1) \cdot r_1 \text{ ... USED }\\
 r_3 &= (1) \cdot r_1 + (-q_2) \cdot ((1) \cdot r_0 + (-q_1) \cdot r_1) \\
@@ -407,9 +406,9 @@ r_2 &= (1) \cdot r_0 + (-q_1) \cdot r_1 \text{ ... USED }\\
 r_3 &= (-q_2) \cdot r_0 + (1 + q_1q_2) \cdot r_1 \\
 r_4 &= (1) \cdot r_2 + (-q_3) \cdot r_3  
 \end{align*}
-Note that I can't throw away the first equation yet!
-I need to keep $r_2$ around since it appears in the third equation!
-So when can I throw the first equation away?
+Note that we cannot throw away the first equation yet.
+We need to keep $r_2$ around since it appears in the third equation!
+So when can we throw the first equation away?
 Look at the general case.
 Suppose we have
 \begin{align*}
@@ -679,8 +678,6 @@ Therefore if you're interested in $c$, you don't need to compute $d$
 or $d'$.
 So you can change the EEA to this:
 
-
-
 \begin{Verbatim}[frame=single, fontsize=\small]
 ALGORTHM: EEA2 (sort of EEA ... without the d, d0)
 INPUTS: a, b
@@ -703,7 +700,7 @@ OUTPUTS: r, c where r = gcd(a, b) = c*a + d*b for some d
 \end{Verbatim}
 
 Later you'll see why we compute only $c$.
-It's not that I have something against $d$.
+It's not that we have something against $d$.
 
 \newpage
 \begin{ex}

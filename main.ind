@@ -1,40 +1,57 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{45}
+  \item abelian group, \hyperpage{49}
 
   \indexspace
 
-  \item B\'ezout's coefficients, \hyperpage{19}
+  \item B\'ezout's coefficients, \hyperpage{23}
 
   \indexspace
 
-  \item Caesar cipher, \hyperpage{37}
+  \item Caesar cipher, \hyperpage{41}
 
   \indexspace
 
   \item divides, \hyperpage{10}
+  \item division algorithm, \hyperpage{12}
 
   \indexspace
 
-  \item Euclidean Algorithm, \hyperpage{13}
-  \item Extended Euclidean Algorithm, \hyperpage{19}
+  \item Euclidean Algorithm, \hyperpage{17}
+  \item Euclidean property, \hyperpage{12}
+  \item Euclidean property 2, \hyperpage{12}
+  \item Euclidean property 3, \hyperpage{12}
+  \item Extended Euclidean Algorithm, \hyperpage{23}
 
   \indexspace
 
-  \item GCD Lemma, \hyperpage{12}
-  \item group, \hyperpage{45}
+  \item GCD Lemma, \hyperpage{16}
+  \item group, \hyperpage{49}
 
   \indexspace
 
-  \item inverse, \hyperpage{45}
+  \item inverse, \hyperpage{49}
   \item invertible, \hyperpage{7}
 
   \indexspace
 
-  \item shift cipher, \hyperpage{37}
+  \item quotient, \hyperpage{12}
+
+  \indexspace
+
+  \item remainder, \hyperpage{12}
+
+  \indexspace
+
+  \item shift cipher, \hyperpage{41}
 
   \indexspace
 
   \item unit, \hyperpage{7}
+
+  \indexspace
+
+  \item Well-ordering principle for $\N$, \hyperpage{13}
+  \item Well-ordering principle for $\Z$, \hyperpage{13}
 
 \end{theindex}
