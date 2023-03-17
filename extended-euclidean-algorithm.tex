@@ -612,22 +612,22 @@ ALGORITHM: EEA
 INPUTS: a, b
 OUTPUTS: r, c, d where r = gcd(a, b) = c*a + d*b
 
-    a0, b0 = a, b
-    d0, d = 0, 1
-    c0, c = 1, 0
+a0, b0 = a, b
+d0, d = 0, 1
+c0, c = 1, 0
+q = a0 // b0
+r = a0 - q * b0
+
+while r > 0:
+    d, d0 = d0 - q * d, d    
+    c, c0 = c0 - q * c, c
+
+    a0, b0 = b0, r
     q = a0 // b0
     r = a0 - q * b0
-    
-    while r > 0:
-        d, d0 = d0 - q * d, d    
-        c, c0 = c0 - q * c, c
-    
-        a0, b0 = b0, r
-        q = a0 // b0
-        r = a0 - q * b0
 
-    r = b0
-    return r, c, d
+r = b0
+return r, c, d
 \end{Verbatim}
 You can pound real hard at the Extended Euclidean Algorithm with this:
 
@@ -642,10 +642,10 @@ you have a compiler/interpreter that can perform
 true tail recursion, then it would run exactly like the above algorithm.
 
 \begin{ex}
-  Leetcode 365:
-  \url{https://leetcode.com/problems/water-and-jug-problem/description/}
-  and the Die Hard 3 problem
-  \url{https://www.math.tamu.edu/~dallen/hollywood/diehard/diehard.htm}.
+  Leetcode 365 \\
+  \url{https://leetcode.com/problems/water-and-jug-problem/description/} \\
+  (Also, Die Hard 3 problem
+  \url{https://www.math.tamu.edu/~dallen/hollywood/diehard/diehard.htm}.)
   You are given two jugs with capacities \verb!jug1Capacity! and
   \verb!jug2Capacity! liters.
   There is an infinite amount of water supply available.
@@ -683,20 +683,20 @@ ALGORTHM: EEA2 (sort of EEA ... without the d, d0)
 INPUTS: a, b
 OUTPUTS: r, c where r = gcd(a, b) = c*a + d*b for some d
 
-    a0, b0 = a, b
-    c0, c = 1, 0
+a0, b0 = a, b
+c0, c = 1, 0
+q = a0 // b0
+r = a0 - q * b0
+
+while r > 0:   
+    c, c0 = c0 - q * c, c
+
+    a0, b0 = b0, r
     q = a0 // b0
     r = a0 - q * b0
 
-    while r > 0:   
-        c, c0 = c0 - q * c, c
-    
-        a0, b0 = b0, r
-        q = a0 // b0
-        r = a0 - q * b0
-
-    r = b0
-    return r, c
+r = b0
+return r, c
 \end{Verbatim}
 
 Later you'll see why we compute only $c$.
@@ -737,13 +737,16 @@ It's not that we have something against $d$.
 
 
 \begin{ex}
-  Leetcode 920.
-  \url{https://leetcode.com/problems/number-of-music-playlists}
-  Your music player contains n different songs. You want to listen to goal songs (not necessarily different) during your trip. To avoid boredom, you will create a playlist so that:
-
-Every song is played at least once.
-
-A song can only be played again only if k other songs have been played.
-
-Given \verb!n!, \verb!goal!, and \verb!k!, return the number of possible playlists that you can create. Since the answer can be very large, return it modulo $109 + 7$.
+  Leetcode 920.\\
+  \url{https://leetcode.com/problems/number-of-music-playlists}\\
+  Your music player contains n different songs.
+  You want to listen to goal songs (not necessarily different) during your trip.
+  To avoid boredom, you will create a playlist so that:
+  \begin{enumerate}[nosep]
+    \li Every song is played at least once.
+    \li A song can only be played again only if k other songs have been played.
+  \end{enumerate}
+  Given \verb!n!, \verb!goal!, and \verb!k!,
+  return the number of possible playlists that you can create.
+  Since the answer can be very large, return it modulo $109 + 7$.
 \end{ex}

@@ -1,6 +1,8 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{49}
+  \item abelian group, \hyperpage{69}
+  \item additive inverse, \hyperpage{48}
+  \item arithmetic function, \hyperpage{56}
 
   \indexspace
 
@@ -8,7 +10,9 @@
 
   \indexspace
 
-  \item Caesar cipher, \hyperpage{41}
+  \item Caesar cipher, \hyperpage{61}
+  \item composites, \hyperpage{40}
+  \item coprime, \hyperpage{50}
 
   \indexspace
 
@@ -17,21 +21,42 @@
 
   \indexspace
 
+  \item Euclid's lemma, \hyperpage{40}
   \item Euclidean Algorithm, \hyperpage{17}
   \item Euclidean property, \hyperpage{12}
   \item Euclidean property 2, \hyperpage{12}
   \item Euclidean property 3, \hyperpage{12}
+  \item Euler's Theorem, \hyperpage{57}
+  \item exponential runtime with linear exponent, \hyperpage{43}
   \item Extended Euclidean Algorithm, \hyperpage{23}
 
   \indexspace
 
-  \item GCD Lemma, \hyperpage{16}
-  \item group, \hyperpage{49}
+  \item Fermat's Little Theorem, \hyperpage{56}
+  \item Fundamental Theorem of Arithmetic, \hyperpage{41}
 
   \indexspace
 
-  \item inverse, \hyperpage{49}
+  \item GCD Lemma, \hyperpage{16}
+  \item Goldbach conjecture, \hyperpage{44}
+  \item group, \hyperpage{69}
+
+  \indexspace
+
+  \item inverse, \hyperpage{69}
   \item invertible, \hyperpage{7}
+
+  \indexspace
+
+  \item Mersenne prime, \hyperpage{44}
+  \item multiplicative, \hyperpage{56}
+  \item multiplicative inverse, \hyperpage{48}
+
+  \indexspace
+
+  \item perfect, \hyperpage{44}
+  \item prime, \hyperpage{40}
+  \item pseudo-polynomial runtime, \hyperpage{43}
 
   \indexspace
 
@@ -43,11 +68,16 @@
 
   \indexspace
 
-  \item shift cipher, \hyperpage{41}
+  \item shift cipher, \hyperpage{61}
 
   \indexspace
 
-  \item unit, \hyperpage{7}
+  \item twin prime conjecture, \hyperpage{44}
+  \item twin primes, \hyperpage{44}
+
+  \indexspace
+
+  \item unit, \hyperpage{7}, \hyperpage{48}
 
   \indexspace
 

@@ -5,18 +5,21 @@
 \contentsline {section}{\numberline {1.4}Euclidean property}{12}{section.1.4}% 
 \contentsline {section}{\numberline {1.5}Euclidean algorithm -- GCD}{16}{section.1.5}% 
 \contentsline {section}{\numberline {1.6}Extended Euclidean algorithm: GCD as linear combination}{23}{section.1.6}% 
-\contentsline {chapter}{\numberline {2}Classical ciphers}{40}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Shift cipher}{41}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Affine cipher}{42}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Vigen\`ere cipher}{43}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Substitution cipher}{44}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Permutation cipher}{45}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Hill cipher}{46}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}One-time pad cipher}{47}{section.2.7}% 
-\contentsline {section}{\numberline {2.8}Linear feedback shift register}{48}{section.2.8}% 
-\contentsline {chapter}{\numberline {3}Group theory}{49}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Definitions}{49}{section.3.1}% 
-\contentsline {chapter}{\numberline {4}Ring theory}{50}{chapter.4}% 
-\contentsline {chapter}{\numberline {5}Field theory}{51}{chapter.5}% 
-\contentsline {chapter}{Index}{52}{chapter.5}% 
-\contentsline {chapter}{Bibliography}{53}{chapter*.53}% 
+\contentsline {section}{\numberline {1.7}Primes}{40}{section.1.7}% 
+\contentsline {section}{\numberline {1.8}Multiplicative inverse in $\mathbb Z/N$}{47}{section.1.8}% 
+\contentsline {section}{\numberline {1.9}Euler Totient Function}{53}{section.1.9}% 
+\contentsline {chapter}{\numberline {2}Classical ciphers}{60}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Shift cipher}{61}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Affine cipher}{62}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Vigen\`ere cipher}{63}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Substitution cipher}{64}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Permutation cipher}{65}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Hill cipher}{66}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}One-time pad cipher}{67}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}Linear feedback shift register}{68}{section.2.8}% 
+\contentsline {chapter}{\numberline {3}Group theory}{69}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Definitions}{69}{section.3.1}% 
+\contentsline {chapter}{\numberline {4}Ring theory}{70}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Field theory}{71}{chapter.5}% 
+\contentsline {chapter}{Index}{72}{chapter.5}% 
+\contentsline {chapter}{Bibliography}{73}{chapter*.53}% 

@@ -1,0 +1,414 @@
+\section{Euler Totient Function}
+
+\begin{defn}
+Let $N$ be a positive integer. $\phi(N)$ is the number of positive
+integers from $0$ to $N-1$ which are coprime to $N$, i.e.
+\[
+\phi(N) = | \{ a \,|\, 0 \leq a \leq N - 1, \,\,\,\gcd(a,N) = 1\} |
+\]
+\end{defn}
+
+Note that you can also view $\phi$ in this way:
+\begin{align*}
+\phi(N) 
+&= | \{ a \mid 0 \leq a \leq N - 1, \,\,\,\gcd(a,N) = 1\} | \\
+&= | \{ a \mid 0 \leq a \leq N - 1, \,\,\, a \text{ is invertible mod } N\}|\\
+&= | (\Z/N^\times) |
+\end{align*}
+Recall that
+$\{ a \,|\, 0 \leq a \leq N - 1, \,\,\,\gcd(a,N) = 1\}$
+is the set of units of $\Z/N$ which is denoted by $(\Z/N)^\times$ or $U(\Z/N)$.
+So the above definition is the same as
+\[
+\phi(N) = | U(\Z/N) |
+\]
+
+Note that by definition $\phi(1) = 1$.
+Here are some important properties of $\phi$.
+
+\begin{prop} Let $n > 0$ be a positive integer.
+  \begin{enumerate}[topsep=0in, nosep]
+  \item[\textnormal{(a)}]
+    Then
+    \[
+    \phi(n) = n \prod_{p \mid N} \left( 1 -  \frac{1}{p} \right)
+    \]
+    where \lq\lq $\prod_{p \mid n}$"
+    is
+    \lq\lq product over all primes $p$ dividing $n$".
+  \item[\textnormal{(b)}] If $m,n$ are coprime, i.e. $\gcd(m,n)=1$, then
+    $\phi(mn) = \phi(m)\phi(n)$.
+  \item[\textnormal{(c)}]
+    If $p$ is a prime and $k > 0$, then
+    $\phi(p^k) = p^{k-1}(p-1) = p^k - p^{k-1}$.
+  \end{enumerate}
+\end{prop}
+\proof
+TODO
+\qed
+
+Let's compute $\phi(10)$.
+Note that $10 = 2 \cdot 5$ and $\gcd(2,5) = 1$.
+Therefore using (b) of the above theorem we get
+\[
+\phi(10) = \phi(2^1 \cdot 5^1) = \phi(2^1) \cdot \phi(5^1)
+\]
+since $\gcd(2^1 \cdot 5^1) = 1$.
+Using (c) of the above theorem I get
+\[
+\phi(10) = \phi(2^1) \cdot \phi(5^1)
+= (2^1 - 2^{1-1}) \cdot (5^1 - 5^{1-1}) = 1 \cdot 4 = 4
+\]
+Of course you can also use (a) above to get
+\[
+\phi(10) = 10 \cdot (1 - 1/2) \cdot (1 - 1/5)
+= 10 \cdot \frac{1}{2} \cdot \frac{4}{5} = 4
+\]
+In both cases, we get 4.
+This means in $\Z/10$, there are 4 elements which are invertible.
+Running $a$ through $\{0, 1, 2, ..., 9\}$,
+you'll see that invertible $a$'s are $1, 3, 7, 9$
+with inverses $1, 7, 3, 9$ respectively.
+
+\begin{ex}
+  \mbox{}
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item  Compute $\phi(735)$.
+  \item  Compute $\phi(900)$.
+  \item  Compute $\phi(263891)$.
+  \end{enumerate}
+\end{ex}
+
+\begin{ex}
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item  Let $p$ be a prime. What is $\phi(2p)$ in terms of $p$?
+  \item  How many solutions are there to $\phi(n) = 2n$?
+  \item  How many solutions are there to $\phi(n) = n/2$?    
+  \end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+  Easy: What is $\phi(pq)$ as an integer expression
+  involving $p$ and $q$? Can you write it as an expression
+  involving the sum and product of $p$ and $q$? (i.e., besides
+  constants and operators, your 
+  expression contains only $p+q$ and $pq$).
+\end{ex}
+
+
+\begin{ex}
+  \mbox{}
+  \begin{enumerate}[nosep]
+    \item[(a)]
+      Solve $\phi(n) = 2$, i.e., find all positive integers $n$ such that
+      $\phi(n) = 2$.
+      (Hint: Write down the prime factorization of
+      $n = p_1^{e_1}\cdots p_g^{e_g}$ and use the
+      equation $\phi(n) = 2$.)
+    \item[(b)] Solve $\phi(n) = 3$.
+    \item[(b)] Solve $\phi(n) = 6$.
+  \end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+  Prove that
+  \[
+  \phi(mn) = \phi(m)\phi(n) \cdot \frac{g}{\phi(g)}
+  \]
+  where $g = \gcd(m,n)$.
+  (Note that the above does \textit{not} assume $m,n$ are coprime.
+  What is the above if $m,n$ are coprime?)
+\end{ex}
+
+
+\begin{ex} $^*$
+Plot a function of the graph $y = \phi(x)$ for integer values of $x$
+running through $1$ to $10000$.
+See any pattern? Note that if you want an approximation (for instance
+in the asymptotics) that's not too difficult.
+Note the following:
+There are two ways to compute $\phi(n)$:
+\begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+\item $\phi(n) = |\{x \mid 0 \leq x < n - 1, \,\,\, \gcd(x, n) = 1\}|$
+  which required Euclidean algorithm in a loop.
+\item
+  $\phi(n)$
+  $= \phi(p_1^{\alpha_1} \cdots p_g^{\alpha_g})$
+  $= (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_1^{\alpha_g} - p_1^{\alpha_g - 1})$
+  which requires prime factorization.
+\end{enumerate}
+The first method is slow: you need to loop your $x$ and for each $x$ you need to
+execute the EEA which has a loop.
+The second method is fast only if you can find the prime
+factorization of $n$.
+Is it possible to find $\phi(n)$ as a formula in $n$ without finding the
+prime factorization of $n$?
+For instance the factorial function $n!$ has this interpolation:
+If
+\[
+\Gamma(x) = \int_0^\infty t^{x-1} e^{-t} \ dt
+\]
+then $\Gamma(n) = n!$ for positive integers $n$.
+Is there a fast interpolation of $\phi(n)$? 
+\end{ex}
+
+
+\begin{ex}$^*$
+  Can you find an $n$ such that $\phi(n)$ divides $n + 1$?
+\end{ex}
+
+
+\begin{ex}$^*$
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item If $p$ is a prime, then $\phi(p) = p - 1$.
+    Prove that if $\phi(n) = n - 1$, then $n$ is a prime.
+  \item
+    Can you find an $n > 1$ which is not a prime (i.e. composite)
+    and such that
+    $\phi(n)$ divides $n - 1$?
+    If you can find one, let me know ASAP.
+    Or if you can prove that such as $n$ does not exist, let me know ASAP.
+  \end{enumerate}
+\end{ex}
+
+\begin{ex}$^*$
+  \mbox{}
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+    \item
+      Can you find some $n$ such that
+      \[
+      \phi(\phi(n)) = 1
+      \]
+    \item
+      Write $\phi^2(n) = \phi(\phi(n))$.
+      Can you find \textit{all} $n$ such that $\phi^2(n) = 1$.
+    \item
+      Write $\phi^k$ to the composition of $k$ Euler $\phi$.
+      What about $\phi^3(n) = 1$?
+      Can you find some $n$ satisfying the above equation?
+    \item
+      What about $\phi^k(2^n) = 1$? What is the smallest $k$
+      for $\phi^k(2^n) = 1$?
+    \item
+      What about $\phi^k(2^m \cdot 3^n) = 1$? What is the smallest $k$
+      such that $\phi^k(2^m \cdot 3^n) = 1$?
+  \end{enumerate}
+\end{ex}
+
+
+As an aside, note that $\phi$ as a function has domain of $\N$.
+In this case, we say that $\phi$ is an
+\defterm{arithmetic function}\tinysidebar{arithmetic function}\index{arithmetic function}.
+Furthermore, $\phi$ satisfies the property that
+if $\gcd(m,n) = 1$, then $\phi(mn) = \phi(m)\phi(n)$.
+A function $\N \rightarrow \C$ satisfying this property
+is said to be
+\defterm{multiplicative}
+\index{multiplicative}
+\tinysidebar{multiplicative}.
+The Euler $\phi$ function is one of many multiplicative arithmetic
+functions.
+Multiplicative functions are extremely important in number theory.
+
+The following theorem allows you to compute powers in mod $p$ extremely
+fast:
+
+\begin{thm} \textnormal{(\defone{Fermat's Little Theorem})}.
+  Let $p$ is a prime number
+  and $a$ be a positive integer not divisible by $p$. Then
+  \[
+  a^{p-1} \equiv 1 \,\,\,(\operatorname{mod} p)
+  \]
+\end{thm}
+
+
+\proof
+TODO
+\qed
+
+
+\begin{ex}
+Compute $r$ where $r$ is the smallest positive integer satisfying
+\[
+ 5^{642} \equiv r \,\,\,(\operatorname{mod} 641)
+\]
+\end{ex}
+
+\begin{cor}
+Let $p$ be a prime. Then $a^p \equiv a
+\,\,\,(\operatorname{mod} p)$.
+\end{cor}
+
+Note that the corollary does not require $p \nmid a$.
+The proof of the corollary is easy.
+If $p \mid a$, then both sides of the equation is $0$ mod $p$,
+so the congruence is true.
+If $p \nmid a$, then Fermat's Little Theorem gives us
+\[
+a^{p-1} \equiv a \pmod{p}
+\]
+on multiplying both sides by $a$, we get
+\[
+a^p \equiv a \pmod{p}
+\]
+
+\begin{ex}
+What is the remainder of $3^{122436481}$ mod 13?
+\end{ex}
+
+
+Note that Fermat's Little Theorem can be used to compute powers
+very rapidly if you work in mod $p$ where $p$ is a prime. What if
+you need to work in mod $N$ where $N$ is not a prime? There is a
+generalization of Fermat's Little Theorem due to Euler. Note that
+since $p-1 = \phi(p)$, Fermat's Little Theorem
+\[
+ a^{p-1} \equiv 1 \,\,\,(\operatorname{mod} p)
+\]
+can be stated as
+\[
+ a^{\phi(p)} \equiv 1 \,\,\,(\operatorname{mod} p)
+\]
+This statement actually holds if $p$ is replaced by any positive
+integer.
+
+\begin{thm} \textnormal{(\defone{Euler's Theorem})}.
+  Let $a$ and $n$ be positive integers such that $\gcd(a, n) = 1$.
+  Then
+  \[
+  a^{\phi(n)} \equiv 1 \,\,\,(\operatorname{mod} n)
+  \]
+\end{thm}
+\proof
+TODO
+\qed
+
+Note that for $\Z/N$, a computation of
+\[
+a^k \pmod{N}
+\]
+Euler's Theorem can lower the $k$ if $\gcd(a, N)$.
+But after you have lowered the $k$, say to $\ell$,
+you still need to compute $a^\ell \pmod{N}$.
+See the squaring algorithm in the RSA chapter.
+
+
+
+\begin{ex}
+Compute $r$ where $r$ is the smallest positive integer satisfying
+\[
+ 5^{642} \equiv r \,\,\,(\operatorname{mod} 640)
+\]
+\end{ex}
+
+
+\begin{ex}
+What is the remainder of $3^{123456789}$ mod 100?
+\end{ex}
+
+\begin{ex}
+What is the hundreds digit of $3^{123456789}$?
+\end{ex}
+
+\begin{ex}
+  In your \verb!Zmod.py! complete the following:
+  \begin{enumerate}[nosep]
+    \li Exponentiation (i.e., \verb!__pow__!)
+  \end{enumerate}
+  Note that $x^{-1000} \pmod{N}$ is $(x^{-1})^{1000} \pmod{N}$.
+  You want to first check if you can use Euler's Theorem.
+  If it is, use the theorem to lower the exponent to say $\ell$.
+  Then use the obvious loop to compute $x^\ell$ and apply $\pmod{N}$
+  as frequently as possible.
+  After you are done with the above,
+  you might want to improve your \texttt{\_\_pow\_\_} by
+  \textit{not} use Euler's theorem
+  if the exponent is \lq\lq small".
+  You can determine for yourself what if \lq\lq small".
+  For instance you can choose to use Euler's Theorem
+  only when the exponent is greater than $10$.
+  (Later in the RSA chapter, we will talk about the squaring method.)
+\end{ex}
+
+\begin{ex}
+  Leetcode 372.\\
+  \url{https://leetcode.com/problems/super-pow/} \\
+  Your task is to calculate $a^b \pmod{1337}$ where $a$ is a positive integer
+  and $b$ is an extremely large positive integer given in the form of an array.
+  For instance
+  for $a = 2, b = [1,0]$,
+  the output is $1024$.
+\end{ex}
+
+\begin{ex}
+  Leetcode 1015.\\
+  \url{https://leetcode.com/problems/smallest-integer-divisible-by-k/}\\
+  Given a positive integer $k$, you need to find the length of the smallest positive integer
+  $n$ such that $n$ is divisible by $k$, and $n$ only contains the digit $1$.
+  Return the length of $n$. If there is no such $n$, return $-1$.
+  Note: $n$ may not fit in a 64-bit signed integer.
+\end{ex}
+
+\begin{ex}
+  Leetcode 1622.\\
+  \url{https://leetcode.com/problems/fancy-sequence/}\\
+  Write an API that generates fancy sequences using the append, addAll, and multAll operations.
+  Implement the Fancy class:
+  \begin{enumerate}[nosep]
+    \li \verb!Fancy()! Initializes the object with an empty sequence.
+    \li \verb!void append(val)! Appends an integer val to the end of the sequence.
+    \li \verb!void addAll(inc)! Increments all existing values in the sequence by an integer inc.
+    \li \verb!void multAll(m)! Multiplies all existing values in the sequence by an integer \verb!m!.
+    \li \verb!int getIndex(idx)! Gets the current value at index \verb!idx! (0-indexed)
+    of the sequence modulo 109 + 7.
+    If the index is greater or equal than the length of the sequence, return \verb!-1!.
+  \end{enumerate}
+\end{ex}
+
+\begin{ex}
+  Leetcode 1952\\
+  \url{https://leetcode.com/problems/three-divisors/}\\
+  Given an integer \verb!n!, return \verb!true! if \verb!n! has exactly three
+  positive divisors. Otherwise, return \verb!false!.
+  An integer \verb!m! is a divisor of \verb!n!
+  if there exists an integer \verb!k! such that \verb!n = k * m!.
+\end{ex}
+
+
+\begin{ex}
+  \url{https://acm.timus.ru/problem.aspx?space=1&num=1673}\\
+  At the end of the previous semester the students of the
+  Department of Mathematics and Mechanics of the Yekaterinozavodsk State
+  University had to take an exam in network technologies.
+  $N$ professors discussed the curriculum and decided that there would be
+  exactly $N^2$ labs, the first professor would hold labs with numbers
+  $1, N + 1, 2N + 1, ..., N^2 - N + 1$, the second one — labs with numbers
+  $2, N + 2, 2N + 2, ..., N^2 - N + 2$, etc.
+  $N$-th professor would hold labs with numbers
+  $N, 2N, 3N, ..., N^2$.
+  The professors remembered that during the last years lazy students didn't
+  attend labs and as a result got bad marks at the exam.
+  So they decided that a student would be admitted to the exam only if
+  he would attend at least one lab of each professor.
+  $N$ roommates didn't know the number of labs and professors in this semester.
+  These students had different diligence: the first student attended all labs,
+  the second one — only labs which numbers were a multiple of two,
+  the third one — only labs which numbers were a multiple of three, etc…
+  At the end of the semester it turned out that only $K$ of these students
+  were admitted to the exam. Find the minimal $N$ which makes that possible.
+
+  Input:
+  An integer $K$ ($1 \leq K \leq 2 \cdot 10^9$).
+  
+  Output:
+  Output the minimal possible N which satisfies the problem statement.
+  If there is no $N$ for which exactly $K$ students would be admitted to the
+  exam, output 0.
+
+  Example:
+  Input:8, output:15.
+  Input:3, output:0.
+
+\end{ex}
