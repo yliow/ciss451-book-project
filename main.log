@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  7 APR 2023 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  7 APR 2023 18:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2130,10 +2130,10 @@ Package marginnote Info: right page because not two side mode on input line 14.
 
 Package marginnote Info: xpos seems to be 168.98839pt on input line 14.
 Package marginnote Info: Margin note 119.3 is on absolute page 119 on input lin
-e 33.
-Package marginnote Info: right page because not two side mode on input line 33.
+e 29.
+Package marginnote Info: right page because not two side mode on input line 29.
 
-Package marginnote Info: xpos seems to be 136.10112pt on input line 33.
+Package marginnote Info: xpos seems to be 136.10112pt on input line 29.
  [119]) [120]) (./chap-group-theory.tex
 chapter 4.
 (./group-theory-definition.tex
@@ -2222,7 +2222,7 @@ dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (126 pages, 590599 bytes).
+Output written on main.pdf (126 pages, 590384 bytes).
 PDF statistics:
  1441 PDF objects out of 1728 (max. 8388607)
  1279 compressed objects within 13 object streams
