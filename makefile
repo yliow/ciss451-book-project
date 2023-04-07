@@ -10,7 +10,7 @@ LATEXRM = rm -f \
         comment.cut comment.err comment.out \
         latex.py
 
-main:
+main: pi_x_100000.tex pi_x_20.tex pi_x_100.tex primes.tex
 	$(PDF)
 
 view:
@@ -22,3 +22,13 @@ clean:
 	$(LATEXRM)
 c:
 	$(LATEXRM)
+
+pi_x_100000.tex: pi_x.py
+	python pi_x.py 100000 > pi_x_100000.tex
+pi_x_20.tex: pi_x.py
+	python pi_x.py 20 0 > pi_x_20.tex
+pi_x_100.tex: pi_x.py
+	python pi_x.py 100 0 > pi_x_100.tex
+
+primes.tex: primes.py
+	python primes.py > primes.tex

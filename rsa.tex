@@ -1,0 +1,193 @@
+\section{RSA}
+
+Now for RSA $\ldots$
+
+We only need to work with integers. Why? Because any message $M$ is
+really just a sequence of bits and you can cut your sequences of
+bits which can be viewed as an unsigned int, i.e, an integer $\geq 0$.
+So we'll just think of our messages as integers.
+
+So once again suppose Alice wants to send a secret to Bob. The
+secret is an integer $x$.
+
+Bob selects two distinct primes $p$ and $q$.
+He computes $N = pq$ and selected two positive integers $e$ and $d$
+such that
+\[
+ ed \equiv 1 \,\,\,(\operatorname{mod} \phi(N))
+\]
+In other words $e$ and $d$ and multiplicative inverses of each
+other in $\Z/\phi(N)$.
+Furthermore Bob publishes $N$ and $e$ publicly.
+$e$ is called the \defone{encryption exponent}
+and
+$d$ is called the \defone{decryption exponent}.
+
+We assume that the secret $x$ is less than $N$
+because we'll be working in $\Z/N$.
+(Again if $x$ as a bit sequence is too large for $N$,
+then we cut $x$ up into smaller block of bits and send them
+separately.)
+
+Since $N$ and $e$ are public, Alice can download $N$ and $e$
+and then compute
+\[
+E_{(N,e)}(x) = x^e \,\,\,(\operatorname{mod} N)
+\]
+I'll write $x^e \,\,\,(\operatorname{mod} N)$ for the 
+least positive remainder of $x^e$ mod $N$.
+She then sends $x^e \,\,\,(\operatorname{mod} N)$ to Bob.
+
+When Bob received $x^e \,\,\,(\operatorname{mod} N)$, he computes
+\[
+D_{(N,d)}(x) = x^{ed} \,\,\,(\operatorname{mod} N)
+\]
+What we need to prove is that RSA works, i.e.,
+
+
+\begin{thm}
+  Let $p,q$ be primes and $N = pq$.
+  If $ed \equiv 1 \,\,\,(\operatorname{mod} \phi(N))$,
+  then
+  \[
+  (x^e)^d \equiv x \,\,\,(\operatorname{mod} N)
+  \]
+  for all integers $M$.
+\end{thm}
+
+\proof
+Since $ed \equiv 1 \,\,\,(\operatorname{mod} \phi(N))$, we have
+\[
+ ed = k \phi(N) + 1
+\]
+for some integer $k$. Therefore
+\[
+x^{ed} = x^{k\phi(N) + 1} = (x^{\phi(N)})^k x
+\]
+We now consider several cases based on the possible values
+of $\gcd(x, N)$.
+Since $N = pq$, $\gcd(x, N)$ is $1$, $p$, $q$ or $pq$.
+since the only possible divisors of $N=pq$ are $1,p,q,pq$.
+The case of
+$\gcd(x, N) = p$
+and
+$\gcd(x, N) = q$
+are similar.
+
+\textsc{Case 1: $\gcd(x, N) = 1$.}
+TODO
+
+\textsc{Case 2: $\gcd(x, N) = N$.}
+TODO
+
+\textsc{Case 3: $\gcd(x, N) = p$.}
+\qed
+
+\begin{prop}
+  Prove the following:
+  \begin{enumerate}[nosep,label=\textnormal{(\alph*)}]
+  \item
+    If $p$ and $q$ are distinct primes such that $p \mid a$ and $q \mid a$,
+    then $pq \mid a$.
+  \item 
+    If $x \mid a$ and $y \mid a$ and $\gcd(x,y) = 1$, then $xy \mid a$.
+  \item
+    If $x \mid a$ and $y \mid a$, then $(xy/\gcd(x,y)) \mid a$.
+  \end{enumerate}
+  (b) is a generalization of (a)
+  and (c) is a generalization of (b).
+  \qed
+\end{prop}
+\proof
+(a) TODO
+
+(b)
+Since $x \mid a$ and $y \mid a$, we have
+$xk = a = y\ell$.
+Hence $y \mid xk$.
+Since $\gcd(x,y) = 1$,
+by Extended Euclidean Algorithm, there are integer $A, B$ such that
+\[
+Ax + By = 1
+\]
+Hence
+$Axk + Byk = k$.
+Since $y$ divides $Byk$ and $Axk$, by linearity of divisibility,
+$y$ divides $k$.
+Hence $ym = k$.
+Therefore $a = xk = xym$, i.e., $xy \mid a$.
+
+(c)
+Since $y \mid a$, $y/\gcd(x,y) \mid a$.
+Since $\gcd(x, y/\gcd(x,y)) = 1$, by (b), $xy/\gcd(x,y) \mid a$.
+\qed
+
+Note that RSA (and all public key ciphers) are not
+meant for encrypting messages like strings (emails, sales receipts,
+image files, etc.)
+This is an unfortunate thing that's done in many cryptography textbooks. 
+They are actually used to encrypt/decrypt keys for private ciphers
+(3DES, AES, etc.)
+In particular the RSA standard
+(called PKCS -- you can easily find lots of webpages on PKCS)
+does not include
+specification on how to break up long messages before encryption and how to
+reassembly them after decryption.
+The reason for using RSA (and other public key cipher) is used to
+setup keys for private key cipher (example: AES) is because
+AES is much faster than RSA.
+
+OK, let's summarize everything.
+In the following, I'll write $x \pmod{N}$ to be the remainder when $x$
+is divided by $N$.
+There are three steps: Bob has to
+generate keys, Alice has to encrypt, and Bob has to decrypt.
+\begin{enumerate}[nosep]
+ \item Key Generation:
+  \begin{enumerate}
+   \item Bob selects distinct primes $p$ and $q$.
+   \item Bob computes $N = pq$.
+   \item Bob computes $\phi(N) = (p-1)(q-1)$.
+   \item Bob selects $e$ such that $0 < e < \phi(N)$,
+   $\gcd(e, \phi(n)) = 1$.
+   \item Bob computes $d$ such that
+     $ed \equiv 1 \pmod{\phi(N)}$.
+ \item Bob publishes $(N,e)$ (the public key) but keeps $(N,d)$
+   (the private key) to himself.
+  \end{enumerate}
+ \item Encryption:
+   Alice obtains the publicly available $(N,e)$ (the public key) and
+   computes
+  \[
+   E_{(N,e)}(x) = x^e \,\,\,(\operatorname{mod} N)
+  \]
+  and sends it to Bob.
+ \item Decryption: Bob uses $(N,d)$ (the private key) to compute
+ \[
+  D_{(N,d)}( x^e \,\,\,(\operatorname{mod} N) ) = x^{ed} \,\,\,(\operatorname{mod} N)
+ \]
+\end{enumerate}
+
+Note that the key is made up of
+\begin{enumerate}[nosep]
+  \li a \defone{public key} $(N,e)$ and
+  \li a \defone{private key} $(N,d)$
+\end{enumerate}
+$(N,e)$ is revealed to the public.
+$(N,d)$ is kept private.
+In general
+
+\begin{defn}
+  A \defone{public cipher} is made up of the encryption
+  and decryption functions
+  $E_{\text{pubkey}}, D_{\text{privkey}}$ which depends on
+  the key
+  $k = (\text{pubkey}, \text{privkey})$
+  which is a 2-tuple made up of
+  the public key and private key.
+  Such a cipher is also called an
+  \defone{asymmetric key cipher}.
+\end{defn}
+
+Recall that in the case of private (or symmetric) key cipher
+the encryption and decryption keys are the same. 

@@ -1,87 +1,113 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{69}
-  \item additive inverse, \hyperpage{48}
-  \item arithmetic function, \hyperpage{56}
+  \item abelian group, \hyperpage{121}
+  \item additive inverse, \hyperpage{49}
+  \item AKS primality test, \hyperpage{119}
+  \item arithmetic function, \hyperpage{57}
+  \item asymmetric key cipher, \hyperpage{73}
+  \item asymptotically equivalent, \hyperpage{95}
 
   \indexspace
 
-  \item B\'ezout's coefficients, \hyperpage{23}
+  \item B\'ezout's coefficients, \hyperpage{24}
+  \item base, \hyperpage{104, 105}
 
   \indexspace
 
-  \item Caesar cipher, \hyperpage{61}
-  \item composites, \hyperpage{40}
-  \item coprime, \hyperpage{50}
+  \item Caesar cipher, \hyperpage{62}
+  \item Carmichael number, \hyperpage{105}
+  \item composites, \hyperpage{41}
+  \item coprime, \hyperpage{51}
 
   \indexspace
 
-  \item divides, \hyperpage{10}
-  \item division algorithm, \hyperpage{12}
+  \item decryption exponent, \hyperpage{70}
+  \item divides, \hyperpage{11}
+  \item division algorithm, \hyperpage{13}
 
   \indexspace
 
-  \item Euclid's lemma, \hyperpage{40}
-  \item Euclidean Algorithm, \hyperpage{17}
-  \item Euclidean property, \hyperpage{12}
-  \item Euclidean property 2, \hyperpage{12}
-  \item Euclidean property 3, \hyperpage{12}
-  \item Euler's Theorem, \hyperpage{57}
-  \item exponential runtime with linear exponent, \hyperpage{43}
-  \item Extended Euclidean Algorithm, \hyperpage{23}
+  \item encryption exponent, \hyperpage{70}
+  \item Euclid's lemma, \hyperpage{41}
+  \item Euclidean Algorithm, \hyperpage{18}
+  \item Euclidean property, \hyperpage{13}
+  \item Euclidean property 2, \hyperpage{13}
+  \item Euclidean property 3, \hyperpage{13}
+  \item Euler's Theorem, \hyperpage{58}
+  \item exponential runtime with linear exponent, \hyperpage{44}
+  \item Extended Euclidean Algorithm, \hyperpage{24}
 
   \indexspace
 
-  \item Fermat's Little Theorem, \hyperpage{56}
-  \item Fundamental Theorem of Arithmetic, \hyperpage{41}
+  \item false-biased Monte-Carlo algorithm, \hyperpage{119}
+  \item Fermat compositeness test, \hyperpage{99}
+  \item Fermat liar, \hyperpage{100}, \hyperpage{104, 105}
+  \item Fermat numbers, \hyperpage{103}
+  \item Fermat Primality Test, \hyperpage{108}
+  \item Fermat pseudoprime, \hyperpage{104, 105}
+  \item Fermat witness, \hyperpage{100}
+  \item Fermat's Little Theorem, \hyperpage{57}
+  \item Fundamental Theorem of Arithmetic, \hyperpage{42}
 
   \indexspace
 
-  \item GCD Lemma, \hyperpage{16}
-  \item Goldbach conjecture, \hyperpage{44}
-  \item group, \hyperpage{69}
+  \item GCD Lemma, \hyperpage{17}
+  \item Goldbach conjecture, \hyperpage{45}
+  \item group, \hyperpage{121}
 
   \indexspace
 
-  \item inverse, \hyperpage{69}
-  \item invertible, \hyperpage{7}
+  \item inverse, \hyperpage{121}
+  \item invertible, \hyperpage{8}
 
   \indexspace
 
-  \item Mersenne prime, \hyperpage{44}
-  \item multiplicative, \hyperpage{56}
-  \item multiplicative inverse, \hyperpage{48}
+  \item Koselt's criterion, \hyperpage{113}
+  \item Koselt's Theorem, \hyperpage{113}
 
   \indexspace
 
-  \item perfect, \hyperpage{44}
-  \item prime, \hyperpage{40}
-  \item pseudo-polynomial runtime, \hyperpage{43}
+  \item Mersenne prime, \hyperpage{45}
+  \item Monte-Carlo algorithm, \hyperpage{119}
+  \item multiplicative, \hyperpage{57}
+  \item multiplicative inverse, \hyperpage{49}
 
   \indexspace
 
-  \item quotient, \hyperpage{12}
+  \item perfect, \hyperpage{45}
+  \item PNT, \hyperpage{96}
+  \item prime, \hyperpage{41}
+  \item Prime Number Theorem, \hyperpage{96}
+  \item private key, \hyperpage{72}
+  \item pseudo-polynomial runtime, \hyperpage{44}
+  \item public cipher, \hyperpage{73}
+  \item public key, \hyperpage{72}
 
   \indexspace
 
-  \item remainder, \hyperpage{12}
+  \item quotient, \hyperpage{13}
 
   \indexspace
 
-  \item shift cipher, \hyperpage{61}
+  \item remainder, \hyperpage{13}
 
   \indexspace
 
-  \item twin prime conjecture, \hyperpage{44}
-  \item twin primes, \hyperpage{44}
+  \item shift cipher, \hyperpage{62}
+  \item strong pseudoprimes, \hyperpage{117}
 
   \indexspace
 
-  \item unit, \hyperpage{7}, \hyperpage{48}
+  \item twin prime conjecture, \hyperpage{45}
+  \item twin primes, \hyperpage{45}
 
   \indexspace
 
-  \item Well-ordering principle for $\N$, \hyperpage{13}
-  \item Well-ordering principle for $\Z$, \hyperpage{13}
+  \item unit, \hyperpage{8}, \hyperpage{49}
+
+  \indexspace
+
+  \item Well-ordering principle for $\N$, \hyperpage{14}
+  \item Well-ordering principle for $\Z$, \hyperpage{14}
 
 \end{theindex}
