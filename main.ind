@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item abelian group, \hyperpage{121}
+  \item abelian group, \hyperpage{132}
   \item additive inverse, \hyperpage{49}
   \item AKS primality test, \hyperpage{119}
   \item arithmetic function, \hyperpage{57}
@@ -15,6 +15,7 @@
   \indexspace
 
   \item Caesar cipher, \hyperpage{62}
+  \item Carmichael function, \hyperpage{122}
   \item Carmichael number, \hyperpage{105}
   \item composites, \hyperpage{41}
   \item coprime, \hyperpage{51}
@@ -53,11 +54,11 @@
 
   \item GCD Lemma, \hyperpage{17}
   \item Goldbach conjecture, \hyperpage{45}
-  \item group, \hyperpage{121}
+  \item group, \hyperpage{132}
 
   \indexspace
 
-  \item inverse, \hyperpage{121}
+  \item inverse, \hyperpage{132}
   \item invertible, \hyperpage{8}
 
   \indexspace
@@ -71,6 +72,7 @@
   \item Monte-Carlo algorithm, \hyperpage{119}
   \item multiplicative, \hyperpage{57}
   \item multiplicative inverse, \hyperpage{49}
+  \item multiplicative order, \hyperpage{121}
 
   \indexspace
 

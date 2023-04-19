@@ -80,6 +80,8 @@
 \indexentry{false-biased Monte-Carlo algorithm|hyperpage}{119}
 \indexentry{AKS primality test|hyperpage}{119}
 \indexentry{AKS primality test|hyperpage}{119}
-\indexentry{group|hyperpage}{121}
-\indexentry{inverse|hyperpage}{121}
-\indexentry{abelian group|hyperpage}{121}
+\indexentry{multiplicative order|hyperpage}{121}
+\indexentry{Carmichael function|hyperpage}{122}
+\indexentry{group|hyperpage}{132}
+\indexentry{inverse|hyperpage}{132}
+\indexentry{abelian group|hyperpage}{132}

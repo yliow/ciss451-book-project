@@ -28,9 +28,12 @@
 \contentsline {section}{\numberline {3.8}Fermat primality test}{99}{section.3.8}% 
 \contentsline {section}{\numberline {3.9}Miller-Rabin primality test}{115}{section.3.9}% 
 \contentsline {section}{\numberline {3.10}Monte-Carlo algorithms}{119}{section.3.10}% 
-\contentsline {chapter}{\numberline {4}Group theory}{121}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Definitions}{121}{section.4.1}% 
-\contentsline {chapter}{\numberline {5}Ring theory}{122}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Field theory}{123}{chapter.6}% 
-\contentsline {chapter}{Index}{124}{chapter.6}% 
-\contentsline {chapter}{Bibliography}{126}{chapter*.53}% 
+\contentsline {section}{\numberline {3.11}Carmichael function}{121}{section.3.11}% 
+\contentsline {section}{\numberline {3.12}OpenSSL}{123}{section.3.12}% 
+\contentsline {section}{\numberline {3.13}Fermat factorization}{128}{section.3.13}% 
+\contentsline {chapter}{\numberline {4}Group theory}{132}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Definitions}{132}{section.4.1}% 
+\contentsline {chapter}{\numberline {5}Ring theory}{133}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Field theory}{134}{chapter.6}% 
+\contentsline {chapter}{Index}{135}{chapter.6}% 
+\contentsline {chapter}{Bibliography}{137}{chapter*.53}% 
