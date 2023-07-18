@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  19 APR 2023 00:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2022.7.24)  20 APR 2023 13:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2065,11 +2065,6 @@ e 304.
 Package marginnote Info: right page because not two side mode on input line 304
 .
 Package marginnote Info: xpos seems to be 72.26999pt on input line 304.
-Package marginnote Info: Margin note 104.2 is on absolute page 104 on input lin
-e 306.
-Package marginnote Info: right page because not two side mode on input line 306
-.
-Package marginnote Info: xpos seems to be 261.92697pt on input line 306.
  [104]
 Package marginnote Info: Margin note 105.1 is on absolute page 105 on input lin
 e 353.
@@ -2229,10 +2224,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 45251 strings out of 494553
- 1004984 string characters out of 6177318
- 4108744 words of memory out of 5000000
- 47603 multiletter control sequences out of 15000+600000
+ 45250 strings out of 494553
+ 1004971 string characters out of 6177318
+ 4108727 words of memory out of 5000000
+ 47602 multiletter control sequences out of 15000+600000
  547751 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  81i,17n,107p,140703b,1817s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2258,10 +2253,10 @@ pe1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (137 pages, 648795 bytes).
+Output written on main.pdf (137 pages, 648950 bytes).
 PDF statistics:
- 1551 PDF objects out of 1728 (max. 8388607)
- 1375 compressed objects within 14 object streams
+ 1552 PDF objects out of 1728 (max. 8388607)
+ 1376 compressed objects within 14 object streams
  492 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
