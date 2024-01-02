@@ -612,23 +612,24 @@ ALGORITHM: EEA
 INPUTS: a, b
 OUTPUTS: r, c, d where r = gcd(a, b) = c*a + d*b
 
-a0, b0 = a, b
-d0, d = 0, 1
-c0, c = 1, 0
-q = a0 // b0
-r = a0 - q * b0
-
-while r > 0:
-    d, d0 = d0 - q * d, d    
-    c, c0 = c0 - q * c, c
-
-    a0, b0 = b0, r
+    a0, b0 = a, b
+    d0, d = 0, 1
+    c0, c = 1, 0
     q = a0 // b0
     r = a0 - q * b0
+    
+    while r > 0:
+        d, d0 = d0 - q * d, d    
+        c, c0 = c0 - q * c, c
+    
+        a0, b0 = b0, r
+        q = a0 // b0
+        r = a0 - q * b0
 
-r = b0
-return r, c, d
+    r = b0
+    return r, c, d
 \end{Verbatim}
+You can pound real hard at the Extended Euclidean Algorithm with this:
 
 By the way, this is somewhat similar to what we call
 \textit{tail recursion} (CISS445)
@@ -682,20 +683,20 @@ ALGORTHM: EEA2 (sort of EEA ... without the d, d0)
 INPUTS: a, b
 OUTPUTS: r, c where r = gcd(a, b) = c*a + d*b for some d
 
-a0, b0 = a, b
-c0, c = 1, 0
-q = a0 // b0
-r = a0 - q * b0
-
-while r > 0:   
-    c, c0 = c0 - q * c, c
-
-    a0, b0 = b0, r
+    a0, b0 = a, b
+    c0, c = 1, 0
     q = a0 // b0
     r = a0 - q * b0
 
-r = b0
-return r, c
+    while r > 0:   
+        c, c0 = c0 - q * c, c
+    
+        a0, b0 = b0, r
+        q = a0 // b0
+        r = a0 - q * b0
+
+    r = b0
+    return r, c
 \end{Verbatim}
 
 Later you'll see why we compute only $c$.
